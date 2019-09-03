@@ -78,8 +78,10 @@ async function getBusStop() {
     let bestBusStop = "error finding stop"
     let shortestDistance = Infinity;
     martaData.data.forEach(busStop => {
-        if (distanceBetweenTwoCoords(lat,lng,busStop.LATITUDE, busStop.LONGITUDE) < shortestDistance) {
-            bestBusStop = busStop.TIMEPOINT
+        let thisDistance = (distanceBetweenTwoCoords(lat,lng,busStop.LATITUDE, busStop.LONGITUDE))
+        if (thisDistance < shortestDistance) {
+            shortestDistance = thisDistance;
+            bestBusStop = busStop.TIMEPOINT;
         }
     })
 
