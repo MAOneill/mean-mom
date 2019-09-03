@@ -1,0 +1,72 @@
+/* paul irish border box styling */
+html {
+    box-sizing: border-box;
+    background-color: rgb(51, 77, 101);
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+    
+  }
+
+.liquor-cabinet {
+  
+  width : 100%;
+  position: absolute;
+  top :50px;
+  /* display: grid; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  /* border: 5px solid gold; */
+  /* grid-template-columns: 320px 320px 320px 320px; */
+  /* max-width: 1000px; */
+}
+
+.picture-frame {
+   /* if you set this to a percentage, and drop the height line you loose the square */
+  width:300px; 
+  height:300px;
+
+  float: left;
+  margin: 10px;
+  border: 2px solid cornflowerblue;
+
+
+  /* centering , but my object-fit below in the img tag with width=height is fixing this too.*/
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+
+.picture-frame img {
+
+position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  /* this controls the speed of the transition */
+  /* transition: transform 4400ms;  
+  transition: all .3s ease-in-out; */
+
+
+  /* width:300px;
+  height:300px; */
+  opacity: .9;
+}
+
+.text-on-top {
+  position: absolute;
+  color: white;
+  font-size: 150%;
+  z-index: 1;
+  width:250px;
+  margin:auto;
+  text-align: center;
+  text-shadow: 2em;
+  max-height: 300px;
+  overflow: scroll;
+  
+}
